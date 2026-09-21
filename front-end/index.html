@@ -2,66 +2,57 @@
 <html lang="pt-BR">
 
 <head>
-  <!-- ─────────────────────────────────────────
-       META TAGS & SEO
-       ───────────────────────────────────────── -->
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description"
-    content="Passe e Repassa — curadoria especializada de roupas, acessórios e eletrônicos de segunda mão. Encontre peças únicas com qualidade garantida." />
+    content="Passa e Repassa — plataforma de economia circular. Roupas, acessórios e eletrônicos de qualidade com avaliação, fotografia e entrega garantida." />
   <meta name="keywords"
-    content="segunda mão, brechó, curadoria, roupas usadas, eletrônicos usados, acessórios, sustentabilidade" />
-  <meta name="author" content="Passe e Repassa" />
+    content="economia circular, segunda mão, desapego, roupas, acessórios, eletrônicos, sustentabilidade, brechó online" />
+  <meta name="author" content="Passa e Repassa" />
 
-  <!-- Open Graph (compartilhamento em redes sociais) -->
-  <meta property="og:title" content="Passe e Repassa — Curadoria de Segunda Mão" />
-  <meta property="og:description" content="Roupas, acessórios e eletrônicos selecionados com cuidado para você." />
+  <meta property="og:title" content="Passa e Repassa — Economia Circular com Preço Justo" />
+  <meta property="og:description"
+    content="Conectamos o seu desapego a quem busca qualidade. Roupas, acessórios e eletrônicos ganham uma nova história." />
   <meta property="og:type" content="website" />
 
-  <title>Passe e Repassa — Curadoria de Segunda Mão</title>
+  <title>Passa e Repassa — Moda Circular e Tecnologia com Preço Justo</title>
 
-  <!-- Favicon inline (emoji, sem arquivo externo necessário) -->
   <link rel="icon"
     href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>♻️</text></svg>" />
 
-  <!-- Stylesheet principal -->
-  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet" />
+
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
   <!-- ══════════════════════════════════════════
        HEADER / NAVBAR
-       Fixo no topo. Contém: logo, links de
-       navegação e botão "Quero Vender".
-       Menu mobile controlado por JS no final.
        ══════════════════════════════════════════ -->
   <header id="header" role="banner">
     <nav class="navbar container" aria-label="Navegação principal">
 
-      <!-- Logo -->
-      <a href="#hero" class="navbar__logo" aria-label="Ir para o início">
+      <a href="#hero" class="navbar__logo" aria-label="Passa e Repassa — ir para o início">
         <span class="navbar__logo-icon" aria-hidden="true">♻️</span>
-        <span>Passe e <span>Repassa</span></span>
+        <span>Passa e <span class="navbar__logo-highlight">Repassa</span></span>
       </a>
 
-      <!-- Links de navegação (desktop) -->
       <ul class="navbar__links" role="list">
-        <li><a href="#catalogo" id="nav-catalogo">Catálogo</a></li>
-        <li><a href="#sobre" id="nav-sobre">Sobre</a></li>
-        <li><a href="#contato" id="nav-contato">Contato</a></li>
+        <li><a href="#catalogo">Catálogo</a></li>
+        <li><a href="#sobre">Sobre Nós</a></li>
+        <li><a href="#contato">Contato</a></li>
       </ul>
 
-      <!-- Ações: botão CTA + hamburguer (mobile) -->
       <div class="navbar__actions">
-        <!-- Botão "Quero Vender" — link para WhatsApp futuramente -->
-        <a href="https://wa.me/5500000000000?text=Olá!%20Quero%20vender%20um%20item." target="_blank"
-          rel="noopener noreferrer" class="btn-primary" id="btn-quero-vender"
-          aria-label="Quero vender um item via WhatsApp">
+        <a href="https://wa.me/5500000000000?text=Olá!%20Quero%20vender%20um%20item%20no%20Passa%20e%20Repassa."
+          target="_blank" rel="noopener noreferrer" class="btn-primary navbar__cta">
           Quero Vender
         </a>
 
-        <!-- Botão hamburguer (visível apenas no mobile) -->
         <button class="navbar__hamburger" id="hamburger-btn" aria-label="Abrir menu de navegação" aria-expanded="false"
           aria-controls="mobile-menu">
           <span></span>
@@ -71,105 +62,55 @@
       </div>
     </nav>
 
-    <!-- Menu mobile expansível -->
     <nav class="navbar__mobile-menu container" id="mobile-menu" aria-label="Menu mobile" aria-hidden="true">
       <ul role="list">
         <li><a href="#catalogo" class="mobile-nav-link">Catálogo</a></li>
-        <li><a href="#sobre" class="mobile-nav-link">Sobre</a></li>
+        <li><a href="#sobre" class="mobile-nav-link">Sobre Nós</a></li>
         <li><a href="#contato" class="mobile-nav-link">Contato</a></li>
+        <li>
+          <a href="https://wa.me/5500000000000?text=Olá!%20Quero%20vender%20um%20item%20no%20Passa%20e%20Repassa."
+            target="_blank" rel="noopener noreferrer" class="btn-primary mobile-nav-cta">
+            Quero Vender
+          </a>
+        </li>
       </ul>
     </nav>
   </header>
 
 
   <!-- ══════════════════════════════════════════
-       MAIN — conteúdo principal da página
+       MAIN
        ══════════════════════════════════════════ -->
   <main id="main-content">
 
     <!-- ──────────────────────────────────────
-         SEÇÃO 1 — HERO
-         Título de impacto, subtítulo e CTA.
+         HERO
          ────────────────────────────────────── -->
     <section id="hero" aria-labelledby="hero-title">
-
-      <!-- Fundo decorativo (não interativo) -->
       <div class="hero__bg" aria-hidden="true"></div>
       <div class="hero__orb hero__orb--1" aria-hidden="true"></div>
       <div class="hero__orb hero__orb--2" aria-hidden="true"></div>
 
-      <!-- Conteúdo principal do hero -->
       <div class="container">
         <div class="hero__content">
-
-          <!-- Eyebrow / pré-título -->
-          <p class="hero__eyebrow" aria-label="Curadoria de segunda mão">
+          <p class="hero__eyebrow">
             <span aria-hidden="true">✦</span>
-            Curadoria de Segunda Mão
+            Economia Circular
           </p>
 
-          <!-- Título principal (H1 — único na página) -->
           <h1 class="hero__title" id="hero-title">
-            Moda &amp; Tech<br />
-            <span class="highlight">com história</span><br />
-            e valor real.
+            Moda Circular e Tecnologia com <span class="highlight">Preço Justo.</span>
           </h1>
 
-          <!-- Subtítulo explicando o modelo de curadoria -->
           <p class="hero__subtitle">
-            <strong>O desapego de alguém pode ser o seu próximo item favorito.</strong>
-            Conectamos quem quer vender a quem quer comprar com total segurança.
-            No Passe e Repassa, toda peça, do vestuário ao eletrônico, passa por nossa revisão antes de chegar até você.
-            Moda e tecnologia com valor justo e qualidade garantida.
+            Conectamos o seu desapego a quem busca qualidade. No Passa e Repassa, roupas,
+            acessórios e eletrônicos ganham uma nova história. Nós avaliamos, fotografamos e
+            garantimos a entrega. Simples para quem vende, seguro para quem compra.
           </p>
 
-          <!-- Call to Action -->
           <div class="hero__cta">
-            <a href="#catalogo" class="btn-primary" id="btn-hero-catalogo">
-              <span aria-hidden="true">🛍️</span>
-              Ver Catálogo
-            </a>
-            <a href="#sobre" class="btn-outline" id="btn-hero-saiba-mais">
-              Saiba Mais
-            </a>
-          </div>
-
-          <!-- Estatísticas rápidas -->
-          <div class="hero__stats" aria-label="Números do Passe e Repassa">
-            <div class="hero__stat-item">
-              <span class="hero__stat-number">+500</span>
-              <span class="hero__stat-label">Peças Curadas</span>
-            </div>
-            <div class="hero__stat-item">
-              <span class="hero__stat-number">+300</span>
-              <span class="hero__stat-label">Clientes Satisfeitos</span>
-            </div>
-            <div class="hero__stat-item">
-              <span class="hero__stat-number">3</span>
-              <span class="hero__stat-label">Categorias</span>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Imagem decorativa (lado direito, visível em desktop) -->
-      <div class="hero__visual" aria-hidden="true">
-        <div class="hero__image-frame">
-          <!-- Placeholder visual enquanto imagem real não é inserida -->
-          <div style="
-            width: 100%;
-            height: 500px;
-            background: linear-gradient(135deg, #2D1A4A 0%, #5C3292 50%, #2D1A4A 100%);
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            gap: 1rem;
-          ">
-            <span style="font-size: 5rem;">👗</span>
-            <span
-              style="color: rgba(255,255,255,0.4); font-size: 0.85rem; letter-spacing: 0.1em; text-transform: uppercase;">Imagem
-              do Produto</span>
+            <a href="#catalogo" class="btn-primary">Ver Catálogo</a>
+            <a href="#sobre" class="btn-outline">Saiba Mais</a>
           </div>
         </div>
       </div>
@@ -177,93 +118,141 @@
 
 
     <!-- ──────────────────────────────────────
-         SEÇÃO 2 — CATÁLOGO DE PRODUTOS
-         Grid de 4 cards com informações completas.
-         O botão "Quero Comprar" será linkado ao
-         WhatsApp futuramente (href="#").
+         QUEM SOMOS
+         ────────────────────────────────────── -->
+    <section id="sobre" aria-labelledby="sobre-title">
+      <div class="container">
+
+        <header class="section-header">
+          <p class="section-badge">✦ Sobre Nós</p>
+          <h2 class="section-title" id="sobre-title">Quem <span>Somos</span></h2>
+          <p class="section-lead">
+            Somos uma empresa que acredita no poder da economia circular para transformar vidas,
+            gerar conexões e construir um futuro mais consciente e sustentável.
+          </p>
+        </header>
+
+        <div class="sobre__mission-grid">
+
+          <article class="sobre__card">
+            <div class="sobre__card-icon" aria-hidden="true">🎯</div>
+            <h3 class="sobre__card-title">Missão</h3>
+            <p class="sobre__card-text">
+              Promover o desapego de roupas e objetos que não são mais utilizados, conectando
+              pessoas que desejam vender, trocar ou repassar esses itens, dando a eles uma nova
+              utilidade e evitando desperdícios.
+            </p>
+          </article>
+
+          <article class="sobre__card">
+            <div class="sobre__card-icon" aria-hidden="true">🔭</div>
+            <h3 class="sobre__card-title">Visão</h3>
+            <p class="sobre__card-text">
+              Ser uma empresa reconhecida por facilitar o desapego de forma simples, acessível e
+              consciente, incentivando o consumo responsável e tornando os itens úteis para
+              outras pessoas.
+            </p>
+          </article>
+
+        </div>
+
+        <div class="sobre__values">
+          <h3 class="sobre__values-title">Nossos Valores</h3>
+
+          <ul class="values__grid" role="list">
+            <li class="value__item">
+              <span class="value__icon" aria-hidden="true">🌱</span>
+              <span class="value__label">Consumo Consciente</span>
+            </li>
+            <li class="value__item">
+              <span class="value__icon" aria-hidden="true">🤝</span>
+              <span class="value__label">Respeito e Conexão</span>
+            </li>
+            <li class="value__item">
+              <span class="value__icon" aria-hidden="true">🛡️</span>
+              <span class="value__label">Confiança e Transparência</span>
+            </li>
+            <li class="value__item">
+              <span class="value__icon" aria-hidden="true">💎</span>
+              <span class="value__label">Qualidade e Cuidado</span>
+            </li>
+            <li class="value__item">
+              <span class="value__icon" aria-hidden="true">🌍</span>
+              <span class="value__label">Sustentabilidade e Impacto Positivo</span>
+            </li>
+          </ul>
+        </div>
+
+        <p class="sobre__closing">
+          Vem com a gente fazer o que faz bem para todos!
+        </p>
+
+      </div>
+    </section>
+
+
+    <!-- ──────────────────────────────────────
+         CATÁLOGO
          ────────────────────────────────────── -->
     <section id="catalogo" aria-labelledby="catalogo-title">
       <div class="container">
 
-        <!-- Cabeçalho da seção -->
-        <header class="catalogo__header">
-          <p class="section-badge" aria-label="Seção de catálogo">✦ Catálogo</p>
-          <h2 class="section-title" id="catalogo-title">
-            Peças <span>Selecionadas</span><br />
-            com Curadoria
-          </h2>
+        <header class="section-header">
+          <p class="section-badge">✦ Catálogo</p>
+          <h2 class="section-title" id="catalogo-title">Vitrine PRP: <span>Nossos Achados</span></h2>
           <p class="section-subtitle">
-            Cada item é verificado e aprovado pela nossa equipe antes de entrar no catálogo.
-            Qualidade garantida em cada compra.
+            Cada peça do nosso catálogo é um garimpo real, verificado pela nossa equipe.
           </p>
         </header>
 
-        <!-- Grid de produtos -->
-        <div class="catalogo__grid" role="list" aria-label="Produtos disponíveis">
+        <div id="catalogo-grid" class="catalogo__grid" role="list" aria-label="Produtos disponíveis">
 
-          <!-- ── CARD 1 — Jaqueta Vintage ── -->
-          <article class="product-card" role="listitem" aria-label="Produto: Jaqueta Jeans Vintage">
-            <!-- Imagem do produto -->
+          <!-- ── CARD 1 — Roupa ── -->
+          <article class="product-card" role="listitem">
             <div class="product-card__image-wrap">
-              <!-- Placeholder — substitua src pela URL da imagem real -->
-              <div style="
-                width: 100%; height: 100%;
-                background: linear-gradient(135deg, #1a0f2e 0%, #3d2060 100%);
-                display: flex; align-items: center; justify-content: center;
-                font-size: 4rem;
-              " role="img" aria-label="Jaqueta Jeans Vintage">👕</div>
-              <!-- Badge de categoria -->
-              <span class="product-card__category" aria-label="Categoria: Roupas">Roupas</span>
-              <!-- Badge de condição -->
-              <span class="product-card__condition" aria-label="Condição: Ótimo estado">Ótimo estado</span>
+              <div class="product-card__placeholder product-card__placeholder--roupa" role="img"
+                aria-label="Jaqueta Jeans Vintage Oversized">
+                👕
+              </div>
+              <span class="product-card__category">Roupas</span>
             </div>
 
-            <!-- Informações do produto -->
             <div class="product-card__body">
-              <!-- Código de identificação -->
-              <span class="product-card__code" aria-label="Código do produto PR-001">Cód: #PR-001</span>
-              <!-- Título -->
+              <span class="product-card__code">Cód: #PR-001</span>
               <h3 class="product-card__title">Jaqueta Jeans Vintage Oversized</h3>
-              <!-- Descrição curta -->
               <p class="product-card__desc">
-                Jaqueta jeans estilo vintage em ótimo estado de conservação.
-                Tamanho M, tons de azul lavado clássico.
+                Jaqueta jeans estilo vintage em ótimo estado. Tamanho M, tons de azul lavado
+                clássico.
               </p>
 
-              <!-- Preço e botão -->
               <div class="product-card__footer">
                 <div class="product-card__price">
                   <span class="product-card__price-label">Por apenas</span>
-                  <span class="product-card__price-value" aria-label="R$ 89,00">
+                  <span class="product-card__price-value">
                     <span class="currency">R$</span>89<small>,00</small>
                   </span>
                 </div>
-                <!-- Link futuro para WhatsApp: substitua href pela URL com mensagem pré-preenchida -->
-                <a href="https://wa.me/5500000000000?text=Olá!%20Tenho%20interesse%20no%20item%20%23PR-001%20(Jaqueta%20Jeans%20Vintage)."
-                  target="_blank" rel="noopener noreferrer" class="btn-whatsapp" id="btn-comprar-pr001"
-                  aria-label="Quero comprar a Jaqueta Jeans Vintage via WhatsApp">
-                  <span aria-hidden="true">💬</span> Quero Comprar
+                <a href="https://wa.me/5500000000000?text=Olá!%20Tenho%20interesse%20no%20produto%20Cód:%20%23PR-001%20(Jaqueta%20Jeans%20Vintage)."
+                  target="_blank" rel="noopener noreferrer" class="btn-whatsapp">
+                  Quero Comprar
                 </a>
               </div>
             </div>
           </article>
 
 
-          <!-- ── CARD 2 — Smartphone ── -->
-          <article class="product-card" role="listitem" aria-label="Produto: Smartphone Samsung Galaxy A52">
+          <!-- ── CARD 2 — Eletrônico ── -->
+          <article class="product-card" role="listitem">
             <div class="product-card__image-wrap">
-              <div style="
-                width: 100%; height: 100%;
-                background: linear-gradient(135deg, #0f1a2e 0%, #1a3a5c 100%);
-                display: flex; align-items: center; justify-content: center;
-                font-size: 4rem;
-              " role="img" aria-label="Smartphone Samsung Galaxy A52">📱</div>
-              <span class="product-card__category" aria-label="Categoria: Eletrônicos">Eletrônicos</span>
-              <span class="product-card__condition" aria-label="Condição: Seminovo">Seminovo</span>
+              <div class="product-card__placeholder product-card__placeholder--eletronico" role="img"
+                aria-label="Smartphone Samsung Galaxy A52">
+                📱
+              </div>
+              <span class="product-card__category">Eletrônicos</span>
             </div>
 
             <div class="product-card__body">
-              <span class="product-card__code" aria-label="Código do produto PR-002">Cód: #PR-002</span>
+              <span class="product-card__code">Cód: #PR-002</span>
               <h3 class="product-card__title">Smartphone Samsung Galaxy A52</h3>
               <p class="product-card__desc">
                 128GB, 6GB RAM, câmera 64MP. Sem riscos, carregador original incluso.
@@ -273,218 +262,53 @@
               <div class="product-card__footer">
                 <div class="product-card__price">
                   <span class="product-card__price-label">Por apenas</span>
-                  <span class="product-card__price-value" aria-label="R$ 750,00">
+                  <span class="product-card__price-value">
                     <span class="currency">R$</span>750<small>,00</small>
                   </span>
                 </div>
-                <a href="https://wa.me/5500000000000?text=Olá!%20Tenho%20interesse%20no%20item%20%23PR-002%20(Samsung%20Galaxy%20A52)."
-                  target="_blank" rel="noopener noreferrer" class="btn-whatsapp" id="btn-comprar-pr002"
-                  aria-label="Quero comprar o Samsung Galaxy A52 via WhatsApp">
-                  <span aria-hidden="true">💬</span> Quero Comprar
+                <a href="https://wa.me/5500000000000?text=Olá!%20Tenho%20interesse%20no%20produto%20Cód:%20%23PR-002%20(Samsung%20Galaxy%20A52)."
+                  target="_blank" rel="noopener noreferrer" class="btn-whatsapp">
+                  Quero Comprar
                 </a>
               </div>
             </div>
           </article>
 
+        </div><!-- /#catalogo-grid -->
 
-          <!-- ── CARD 3 — Bolsa de Couro ── -->
-          <article class="product-card" role="listitem" aria-label="Produto: Bolsa de Couro Transversal">
-            <div class="product-card__image-wrap">
-              <div style="
-                width: 100%; height: 100%;
-                background: linear-gradient(135deg, #2e1a0f 0%, #6b3a1a 100%);
-                display: flex; align-items: center; justify-content: center;
-                font-size: 4rem;
-              " role="img" aria-label="Bolsa de Couro Transversal">👜</div>
-              <span class="product-card__category" aria-label="Categoria: Acessórios">Acessórios</span>
-              <span class="product-card__condition" aria-label="Condição: Muito bom">Muito bom</span>
-            </div>
-
-            <div class="product-card__body">
-              <span class="product-card__code" aria-label="Código do produto PR-003">Cód: #PR-003</span>
-              <h3 class="product-card__title">Bolsa de Couro Transversal Premium</h3>
-              <p class="product-card__desc">
-                Bolsa transversal em couro legítimo marrom. Ferragens douradas,
-                alça ajustável. Compartimentos internos organizados.
-              </p>
-
-              <div class="product-card__footer">
-                <div class="product-card__price">
-                  <span class="product-card__price-label">Por apenas</span>
-                  <span class="product-card__price-value" aria-label="R$ 180,00">
-                    <span class="currency">R$</span>180<small>,00</small>
-                  </span>
-                </div>
-                <a href="https://wa.me/5500000000000?text=Olá!%20Tenho%20interesse%20no%20item%20%23PR-003%20(Bolsa%20de%20Couro%20Transversal)."
-                  target="_blank" rel="noopener noreferrer" class="btn-whatsapp" id="btn-comprar-pr003"
-                  aria-label="Quero comprar a Bolsa de Couro via WhatsApp">
-                  <span aria-hidden="true">💬</span> Quero Comprar
-                </a>
-              </div>
-            </div>
-          </article>
-
-
-          <!-- ── CARD 4 — Notebook ── -->
-          <article class="product-card" role="listitem" aria-label="Produto: Notebook Dell Inspiron 15">
-            <div class="product-card__image-wrap">
-              <div style="
-                width: 100%; height: 100%;
-                background: linear-gradient(135deg, #0f2e1a 0%, #1a5c3a 100%);
-                display: flex; align-items: center; justify-content: center;
-                font-size: 4rem;
-              " role="img" aria-label="Notebook Dell Inspiron 15">💻</div>
-              <span class="product-card__category" aria-label="Categoria: Eletrônicos">Eletrônicos</span>
-              <span class="product-card__condition" aria-label="Condição: Seminovo">Seminovo</span>
-            </div>
-
-            <div class="product-card__body">
-              <span class="product-card__code" aria-label="Código do produto PR-004">Cód: #PR-004</span>
-              <h3 class="product-card__title">Notebook Dell Inspiron 15 i5</h3>
-              <p class="product-card__desc">
-                Intel Core i5, 8GB RAM, SSD 256GB. Bateria com boa duração,
-                tela Full HD sem arranhões. Ideal para trabalho e estudos.
-              </p>
-
-              <div class="product-card__footer">
-                <div class="product-card__price">
-                  <span class="product-card__price-label">Por apenas</span>
-                  <span class="product-card__price-value" aria-label="R$ 1.350,00">
-                    <span class="currency">R$</span>1.350<small>,00</small>
-                  </span>
-                </div>
-                <a href="https://wa.me/5500000000000?text=Olá!%20Tenho%20interesse%20no%20item%20%23PR-004%20(Notebook%20Dell%20Inspiron%2015)."
-                  target="_blank" rel="noopener noreferrer" class="btn-whatsapp" id="btn-comprar-pr004"
-                  aria-label="Quero comprar o Notebook Dell via WhatsApp">
-                  <span aria-hidden="true">💬</span> Quero Comprar
-                </a>
-              </div>
-            </div>
-          </article>
-
-        </div><!-- /catalogo__grid -->
-      </div><!-- /container -->
+      </div>
     </section>
 
-
-    <!-- ──────────────────────────────────────
-         SEÇÃO 3 — SOBRE A EMPRESA
-         Duas colunas: "Quem Somos" e "O Que Fazemos".
-         ────────────────────────────────────── -->
-    <section id="sobre" aria-labelledby="sobre-title">
-      <div class="container">
-
-        <!-- Cabeçalho centralizado -->
-        <header style="text-align: center; margin-bottom: var(--spacing-lg);">
-          <p class="section-badge">✦ Sobre Nós</p>
-          <h2 class="section-title" id="sobre-title">
-            Por que o <span>Passe e Repassa</span><br />
-            é diferente?
-          </h2>
-          <p class="section-subtitle" style="margin-inline: auto;">
-            Acreditamos que um produto de qualidade merece uma segunda chance —
-            e você merece encontrá-lo sem complicação.
-          </p>
-        </header>
-
-        <!-- Grid de duas colunas -->
-        <div class="sobre__grid">
-
-          <!-- Coluna 1: Quem Somos -->
-          <article class="sobre__col" aria-labelledby="quem-somos-title">
-            <div class="sobre__col-icon" aria-hidden="true">🏪</div>
-            <h3 class="sobre__col-title" id="quem-somos-title">
-              <span>Quem</span> Somos
-            </h3>
-            <p class="sobre__col-text">
-              O <strong>Passe e Repassa</strong> nasceu da ideia de que consumir com
-              consciência não precisa significar abrir mão de qualidade ou estilo.
-              Somos uma empresa especializada em produtos semi-novos,
-              conectando compradores exigentes a itens verificados e bem cuidados.
-            </p>
-            <p class="sobre__col-text">
-              Nossa equipe analisa cada item antes de publicá-lo, garantindo
-              transparência total sobre o estado de conservação, origem e
-              autenticidade do produto.
-            </p>
-            <ul class="sobre__list" aria-label="Diferenciais da empresa">
-              <li class="sobre__list-item">Fundada com foco em moda sustentável</li>
-              <li class="sobre__list-item">Atendimento humanizado via WhatsApp</li>
-              <li class="sobre__list-item">Produtos selecionados e testados</li>
-            </ul>
-          </article>
-
-          <!-- Coluna 2: O Que Fazemos -->
-          <article class="sobre__col" aria-labelledby="o-que-fazemos-title">
-            <div class="sobre__col-icon" aria-hidden="true">🔍</div>
-            <h3 class="sobre__col-title" id="o-que-fazemos-title">
-              O Que <span>Fazemos</span>
-            </h3>
-            <p class="sobre__col-text">
-              Atuamos como intermediários entre quem quer <strong>vender</strong> e quem
-              quer <strong>comprar</strong>. Recebemos itens, avaliamos a condição e
-              descrevemos cada produto com honestidade para que você compre com confiança.
-            </p>
-            <p class="sobre__col-text">
-              Trabalhamos com três categorias principais: <em>roupas e vestuário</em>,
-              <em>acessórios</em> (bolsas, calçados, bijuterias) e
-              <em>eletrônicos</em> (smartphones, notebooks, fones). Tudo selecionado
-              por especialistas.
-            </p>
-            <ul class="sobre__list" aria-label="Processo de curadoria">
-              <li class="sobre__list-item">Recebemos e avaliamos seu item gratuitamente</li>
-              <li class="sobre__list-item">Fotografamos e publicamos no catálogo</li>
-              <li class="sobre__list-item">Repassamos o valor combinado ao vendedor</li>
-              <li class="sobre__list-item">Entrega segura ao comprador</li>
-            </ul>
-          </article>
-
-        </div><!-- /sobre__grid -->
-      </div><!-- /container -->
-    </section>
-
-  </main><!-- /main -->
+  </main>
 
 
   <!-- ══════════════════════════════════════════
        FOOTER
-       Informações de contato, redes sociais,
-       endereço e direitos autorais.
        ══════════════════════════════════════════ -->
-  <footer id="footer" role="contentinfo" aria-label="Rodapé do site">
+  <footer id="footer" role="contentinfo">
     <div class="container">
 
-      <!-- Grid de colunas do footer -->
       <div class="footer__grid">
 
-        <!-- Coluna 1: Marca / Sobre -->
         <div class="footer__brand">
-          <!-- Logo repetida no footer -->
-          <a href="#hero" class="navbar__logo" aria-label="Voltar ao início">
+          <a href="#hero" class="navbar__logo" aria-label="Passa e Repassa — voltar ao início">
             <span class="navbar__logo-icon" aria-hidden="true">♻️</span>
-            <span>Passe e <span>Repassa</span></span>
+            <span>Passa e <span class="navbar__logo-highlight">Repassa</span></span>
           </a>
 
           <p class="footer__brand-desc">
-            Curadoria especializada de roupas, acessórios e eletrônicos de segunda mão.
-            Consumo consciente com qualidade e estilo.
+            Plataforma de economia circular focada no desapego de roupas, acessórios e
+            eletrônicos de qualidade. Consumo consciente com estilo.
           </p>
 
-          <!-- Redes Sociais -->
           <nav class="footer__socials" aria-label="Redes sociais">
             <a href="https://www.instagram.com/passarepassa.prp/" target="_blank" rel="noopener noreferrer"
-              class="footer__social-link" id="social-instagram" aria-label="Instagram do Passe e Repassa">📸</a>
-            <a href="https://wa.me/5500000000000" target="_blank" rel="noopener noreferrer" class="footer__social-link"
-              id="social-whatsapp" aria-label="WhatsApp do Passe e Repassa">💬</a>
-            <a href="https://tiktok.com" target="_blank" rel="noopener noreferrer" class="footer__social-link"
-              id="social-tiktok" aria-label="TikTok do Passe e Repassa">🎵</a>
-            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="footer__social-link"
-              id="social-facebook" aria-label="Facebook do Passe e Repassa">👤</a>
+              class="footer__social-link" aria-label="Instagram do Passa e Repassa">
+              📸 Instagram
+            </a>
           </nav>
-        </div><!-- /footer__brand -->
+        </div>
 
-
-        <!-- Coluna 2: Navegação rápida -->
         <nav aria-label="Links rápidos">
           <h4 class="footer__col-title">Navegação</h4>
           <ul class="footer__links" role="list">
@@ -492,27 +316,13 @@
             <li><a href="#catalogo">Catálogo</a></li>
             <li><a href="#sobre">Sobre Nós</a></li>
             <li>
-              <a href="https://wa.me/5500000000000?text=Olá!%20Quero%20vender%20um%20item." target="_blank"
-                rel="noopener noreferrer">Quero Vender</a>
+              <a href="https://wa.me/5500000000000?text=Olá!%20Quero%20vender%20um%20item%20no%20Passa%20e%20Repassa."
+                target="_blank" rel="noopener noreferrer">Quero Vender</a>
             </li>
           </ul>
         </nav>
 
-
-        <!-- Coluna 3: Categorias -->
-        <nav aria-label="Categorias do catálogo">
-          <h4 class="footer__col-title">Categorias</h4>
-          <ul class="footer__links" role="list">
-            <li><a href="#catalogo">👗 Roupas</a></li>
-            <li><a href="#catalogo">👜 Acessórios</a></li>
-            <li><a href="#catalogo">📱 Eletrônicos</a></li>
-            <li><a href="#catalogo">💻 Notebooks</a></li>
-          </ul>
-        </nav>
-
-
-        <!-- Coluna 4: Contato -->
-        <address id="contato" aria-label="Informações de contato">
+        <address id="contato" class="footer__contact" aria-label="Informações de contato">
           <h4 class="footer__col-title">Contato</h4>
 
           <div class="footer__contact-item">
@@ -529,9 +339,7 @@
 
           <div class="footer__contact-item">
             <span class="footer__contact-icon" aria-hidden="true">📧</span>
-            <a href="mailto:contato@passerepassa.com.br">
-              contato@passerepassa.com.br
-            </a>
+            <a href="mailto:contato@passarepassa.com.br">contato@passarepassa.com.br</a>
           </div>
 
           <div class="footer__contact-item">
@@ -542,27 +350,17 @@
 
       </div><!-- /footer__grid -->
 
-
-      <!-- Linha inferior: copyright e crédito -->
       <div class="footer__bottom">
         <p class="footer__copyright">
-          &copy; <time datetime="2025">2025</time>
-          <strong>Passe e Repassa</strong>. Todos os direitos reservados.
+          &copy; <time datetime="2026">2026</time>
+          <strong>Passa e Repassa</strong>. Todos os direitos reservados.
         </p>
-        <p class="footer__made-with">
-          Feito com ♻️ e muito cuidado
-        </p>
+        <p class="footer__made-with">Feito com ♻️ e muito cuidado</p>
       </div>
 
-    </div><!-- /container -->
+    </div>
   </footer>
 
-
-  <!-- ──────────────────────────────────────────
-       JAVASCRIPT
-       Controle do menu hamburguer mobile.
-       Nenhuma dependência externa necessária.
-       ────────────────────────────────────────── -->
   <script src="main.js" defer></script>
 
 </body>
