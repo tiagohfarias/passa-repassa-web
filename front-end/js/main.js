@@ -77,7 +77,7 @@ async function carregarCatalogo() {
                         <h3 class="product-card__title">${titulo}</h3>
                         <p class="product-card__desc">Autor: ${autor}</p>
                         <div class="product-card__footer">
-                            <a href="https://wa.me/5500000000000?text=Olá!%20Tenho%20interesse%20no%20item%20%23${codigo}%20(${encodeURIComponent(titulo)})." 
+                            <a href="https://wa.me/+5511973812346?text=Olá!%20Tenho%20interesse%20no%20item%20%23${codigo}%20(${encodeURIComponent(titulo)})." 
                                target="_blank" class="btn-whatsapp">
                                 💬 Quero Comprar
                             </a>
